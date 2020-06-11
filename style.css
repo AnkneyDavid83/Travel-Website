@@ -8,6 +8,10 @@ body {
   background: #17181a;
   font-family: "Montserrat", sans-serif;
   overflow-x: hidden;
+  position: relative;
+}
+main {
+  position: absolute;
 }
 
 #logo {
@@ -25,6 +29,8 @@ body {
   width: 80%;
   margin: auto;
   padding: 2em 0em;
+  z-index: 2;
+  position: relative;
 }
 
 .line1,
@@ -120,10 +126,11 @@ body {
   flex-basis: 10rem;
 }
 .nav-links h3 {
-  padding: 2em 3em;
+  padding: 1em 3em;
 }
 .contact {
-  flex-basis: 35rem;
+  flex-basis: 30rem;
+  margin-bottom: 2rem;
 }
 .contact h2 {
   font-size: 3em;
@@ -143,8 +150,8 @@ body {
   top: -15%;
 }
 .cursor {
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   border: 2px solid white;
   border-radius: 50%;
   position: absolute;
@@ -164,8 +171,8 @@ body {
 }
 .cursor-text {
   position: absolute;
-  top: 40%;
-  left: 35%;
+  top: 30%;
+  left: 25%;
   font-size: 0.5rem;
   transform: translate (-50%, -50%);
 }
@@ -195,4 +202,96 @@ body {
 
 .scrollmagic-pin-spacer {
   position: static !important;
+}
+body.hide {
+  overflow: hidden;
+}
+
+/* Other Pages */
+.fashion1,
+.fashion2,
+.fashion3 {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  color: white;
+  margin-top: 5rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+.fashion-img {
+  height: 80vh;
+  flex-basis: 20rem;
+  margin-top: -8rem;
+}
+.fashion-text {
+  flex: 1;
+  position: relative;
+  flex-basis: 30rem;
+}
+.fashion-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fashion-text h1 {
+  font-size: 4em;
+  padding: 2em -0.5em;
+}
+.fashion1 h1 {
+  color: rgb(255, 139, 93);
+}
+.fashion2 h1 {
+  color: rgb(167, 110, 231);
+}
+.fashion3 h1 {
+  color: rgb(86, 124, 228);
+}
+.fashion-text p {
+  font-size: 2em;
+  padding: 2em 2em 0em 0em;
+  margin-bottom: 10rem;
+}
+.fashion-nr {
+  font-size: 15em;
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  color: white;
+}
+.nr-1 {
+  color: rgba(109, 96, 96, 0.925);
+  opacity: 0.9;
+}
+.nr-2 {
+  color: rgba(111, 38, 206, 0.815);
+  opacity: 0.5;
+}
+.nr-3 {
+  color: rgb(255, 255, 255);
+  opacity: 0.2;
+}
+.swipe {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+.swipe1 {
+  background: rgb(167, 110, 231);
+  z-index: 5;
+}
+.swipe2 {
+  background: rgb(86, 124, 228);
+  z-index: 4;
+}
+.swipe3 {
+  background: rgb(255, 139, 93);
+  z-index: 3;
 }
